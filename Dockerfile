@@ -2,4 +2,4 @@
 FROM dclong/rust
 # GIT: https://github.com/dclong/docker-rust.git
 
-cargo install ripgrep rm-improved bat du-dust
+RUN cargo install ripgrep rm-improved bat du-dust zellij
