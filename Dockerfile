@@ -3,7 +3,6 @@ FROM dclong/rust
 # GIT: https://github.com/legendu-net/docker-rust.git
 
 RUN RUSTFLAGS="-C strip=symbols" cargo install --locked \
-    cargo-criterion \
     zellij \
     ripgrep rm-improved bat du-dust git-delta \
     stork-search
