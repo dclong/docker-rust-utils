@@ -15,3 +15,10 @@ RUN RUSTFLAGS="-C strip=symbols" cargo install --locked \
 #    && evcxr_jupyter --install
 RUN cargo install evcxr_jupyter \
     && evcxr_jupyter --install
+
+# not-perf
+RUN mkdir -p /tmp/not-perf \
+    && git clone https://github.com/koute/not-perf.git /tmp/not-perf \
+    && cd /tmp/not-perf/cli \
+    && cargo build --release \
+    && cp ../target/release/nperf /usr/bin/
