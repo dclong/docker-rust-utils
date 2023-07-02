@@ -23,3 +23,4 @@ RUN mkdir -p /tmp/not-perf \
     && cd /tmp/not-perf/cli \
     && cargo build --release \
     && cp ../target/release/nperf /usr/bin/
+
