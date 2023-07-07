@@ -12,10 +12,10 @@ RUN RUSTFLAGS="-C strip=symbols" cargo install --locked cargo-binstall \
         stork-search
 
 # evcxr_jupyter
-#RUN cargo install --git https://github.com/google/evcxr.git --branch main evcxr_jupyter \
-#    && evcxr_jupyter --install
-RUN cargo-binstall -y evcxr_jupyter \
+RUN cargo install --git https://github.com/google/evcxr.git --branch main evcxr_jupyter \
     && evcxr_jupyter --install
+#RUN cargo-binstall -y evcxr_jupyter \
+#    && evcxr_jupyter --install
 
 # not-perf
 RUN mkdir -p /tmp/not-perf \
