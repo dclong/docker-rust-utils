@@ -3,7 +3,8 @@ FROM dclong/rust
 # GIT: https://github.com/legendu-net/docker-rust.git
 
 RUN rustup component add rust-src rustfmt clippy
-RUN RUSTFLAGS="-C strip=symbols" cargo install --locked cargo-binstall \
+RUN RUSTFLAGS="-C strip=symbols" cargo install --locked \
+        cargo-binstall cargo-udeps \
     && cargo-binstall -y \
         cargo-cache cargo-edit cargo-criterion cargo-udeps sccache \
         zellij \
