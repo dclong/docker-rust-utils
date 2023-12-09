@@ -9,7 +9,7 @@ RUN RUSTFLAGS="-C strip=symbols" cargo install --locked \
         cargo-cache cargo-edit cargo-criterion \
         zellij \
         ripgrep rm-improved bat du-dust \
-        git-delta git-leave \
+        git-delta git-leave gitql \
         stork-search
 
 # evcxr_jupyter
